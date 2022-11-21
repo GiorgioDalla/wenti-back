@@ -12,7 +12,7 @@ require("dotenv").config()
 const PRIVATE_KEY = process.env.RINKEBY_PRIVATE_KEY
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY
 const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL
-
+const AURORA_RPC_URL = process.env.AURORA_RPC_URL
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY
 const REPORT_GAS = process.env.REPORT_GAS || false
 module.exports = {
@@ -31,6 +31,12 @@ module.exports = {
             url: GOERLI_RPC_URL,
             accounts: [PRIVATE_KEY],
             chainId: 5,
+            blockConfirmations: 6,
+        },
+        aurora: {
+            url: AURORA_RPC_URL,
+            accounts: [PRIVATE_KEY],
+            chainId: 1313161555,
             blockConfirmations: 6,
         },
     },

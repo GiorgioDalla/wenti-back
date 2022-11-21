@@ -14,9 +14,9 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
         log: true,
         waitConfirmatons: network.config.blockConfirmations || 1,
     })
-    if (!developmentChains.includes(network.name) && process.env.ETHERSCAN_API_KEY) {
-        await verify(wenti.address, args)
-    }
+    // if (!developmentChains.includes(network.name) && process.env.ETHERSCAN_API_KEY) {
+    //     await verify(wenti.address, args)
+    // }
     log(`deployer is ${deployer}`)
     log("--------------------------------")
 }
