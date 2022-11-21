@@ -1,7 +1,7 @@
 const networkConfig = {
-    // 5: {
-    //     name: "goerli",
-    // },
+    5: {
+        name: "goerli",
+    },
     1313161555: {
         name: "aurora",
     },
