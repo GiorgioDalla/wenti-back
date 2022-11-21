@@ -26,18 +26,18 @@ const { developmentChains } = require("../../helper-hardhat-config")
                   assert.equal(contractBal.toString(), sendValue)
               })
           })
-          describe("earnPrize", function () {
-              it("will send rewards to whom calls it", async () => {
-                  await addr1.sendTransaction({
-                      to: wentiContract.address,
-                      value: sendValue,
-                  })
-                  await wentiContract.earnPrize()
-                  const deployBal = await wentiContract.provider.getBalance(
-                      "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
-                  )
-                  console.log(deployBal)
-                  assert.equal(deployBal.toString(), ethers.utils.parseEther("0.00005"))
-              })
-          })
+        //   describe("earnPrize", function () {
+        //       it("will send rewards to whom calls it", async () => {
+        //           await addr1.sendTransaction({
+        //               to: wentiContract.address,
+        //               value: sendValue,
+        //           })
+        //           await wentiContract.earnPrize()
+        //           const deployBal = await wentiContract.provider.getBalance(
+        //               "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+        //           )
+        //           console.log(deployBal)
+        //           assert.equal(deployBal.toString(), ethers.utils.parseEther("0.00005"))
+        //       })
+        //   })
       })
